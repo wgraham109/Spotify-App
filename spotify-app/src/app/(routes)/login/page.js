@@ -5,7 +5,7 @@ import Footer from "@/app/components/footer";
 export default function Login(){
     return(
         <div className="flex flex-col min-h-screen w-full bg-background_light gap-5"> 
-            <Header loggedIn={false}/>
+            <Header loggedIn={true}/>
             <main className="flex flex-col w-full justify-center">
                 <div className="bg-highlight rounded-md mx-auto py-5">
                     <h1 className="text-black text-center text-xl font-semibold"> Log in to your account </h1>
