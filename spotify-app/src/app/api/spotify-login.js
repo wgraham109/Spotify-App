@@ -1,4 +1,8 @@
-
+// Initializing parameters for authorization request
+const clientId = process.env.SPOTIFY_CLIENT_ID;
+const redirectUri = 'http://localhost:3000';
+const scope = 'user-read-private user-read-email';
+const authUrl = new URL("https://accounts.spotify.com/authorize")
 
 // Generate random string with "high entropy"
 const generateRandomString = (length) => {
@@ -32,12 +36,6 @@ const base64encode = (input) => {
 // Hashing the codeVerifier
 const hashed = await sha256(codeVerifier)
 const codeChallenge = base64encode(hashed);
-
-// Initializing parameters for authorization request
-const clientId = process.env.SPOTIFY_CLIENT_ID;
-const redirectUri = 'http://localhost:3000';
-const scope = 'user-read-private user-read-email';
-const authUrl = new URL("https://accounts.spotify.com/authorize")
 
 // Parameters for authorization request to be sent to Spotify
 const params =  {
