@@ -1,5 +1,8 @@
+"use client";
+
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
+import { getCode } from "@/app/lib/spotify";
 
 export default function Dashboard(){
     return (
@@ -7,7 +10,9 @@ export default function Dashboard(){
             <Header/>
             <main>
                 <div>
-                    
+                    <button onClick={() => getCode()}>
+                        Connect with Spotify
+                    </button>
                 </div>
             </main>
             <Footer/>
